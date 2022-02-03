@@ -23,6 +23,8 @@ export default function Detail() {
     getData()
   },[])
 
+
+ 
   return (<Container>
       {
         movies.map((movie,i) => (
@@ -36,6 +38,16 @@ export default function Detail() {
                 <p>{movies[i].overview}</p>
                 <span>Release Date : {movies[i].release_date || movies[i].first_air_date}</span>
                 <h3>Type : {movies[i].media_type} </h3>
+                
+                  {movies[i].adult ? (
+                    <span>Adult </span>
+                  ) : ""}
+
+                <ContainerButton>
+                <ButtonWatch >{!movies[i].video ? 'No video to watch' : 'Watch trailer'}</ButtonWatch>
+                <ButtonWatch>Add to Watchlist</ButtonWatch>
+                </ContainerButton>
+
                 </MoviesDesc>
 
               </MovieInfo>
@@ -109,4 +121,22 @@ const MoviesDesc = styled.div`
     font-weight:200;
     text-transform:uppercase;
   }
+`
+
+const ButtonWatch = styled.button`
+  width:200px;
+  border-radius:10px;
+  padding: 0.5rem 1rem;
+  font-size:20px;
+  font-weight:600;
+  cursor: pointer;
+  &:hover { 
+    opacity:0.8;
+  }
+`
+
+const ContainerButton = styled.div`
+  display:flex;
+  gap : 1rem;
+
 `
