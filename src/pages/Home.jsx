@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import { Context } from '../context';
 export default function Home() {
   const {movies} = useContext(Context)
-
+  console.log(movies)
   return <Container>
 
       <Reactslick/>
