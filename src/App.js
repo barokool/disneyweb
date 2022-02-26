@@ -5,6 +5,9 @@ import Navbar from './components/navbar/Navbar';
 import Home from './pages/Home';
 import Detail from './pages/detail/Detail'
 import Error from './pages/Error';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 function App() {
   return (
