@@ -30,7 +30,7 @@ export default function Detail() {
     // }
     // getData()
     // showVideo()
-  }, [id]);
+  }, [getVideo,id]);
 
   return (
     <Container>
