@@ -18,7 +18,6 @@ const object = [
 SwiperCore.use([ Pagination]);
 
 export default function Reactslick() {
-
   return (
     <React.Fragment>
       <Swiper
