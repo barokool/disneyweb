@@ -4,6 +4,7 @@ import { signInWithPopup, signOut } from "firebase/auth";
 import { auth, googleProvider } from "../../firebase";
 import { Context } from "../../context";
 import { Link, useNavigate } from "react-router-dom";
+import Avatar from '../dropdown/Avatar'
 export default function Navbar() {
   const { user } = useContext(Context);
   const navigate = useNavigate()
@@ -20,10 +21,7 @@ export default function Navbar() {
       });
   };
 
-  const handleLogout = () => {
-    signOut(auth);
-    navigate('/')
-  };
+  
   return (
     <Container>
       <LinkContainer>
@@ -91,8 +89,7 @@ export default function Navbar() {
       
       {user ? (
         <LeftContainer>
-        <UserLogo src={user.photoURL} alt="logo of user" />
-          <Button onClick={handleLogout}>Log out</Button>
+          <Avatar />
         </LeftContainer>
       ) : (
         <Button onClick={handleLogin}>Login</Button>

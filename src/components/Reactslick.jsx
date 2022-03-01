@@ -19,9 +19,10 @@ SwiperCore.use([ Pagination]);
 
 export default function Reactslick() {
   return (
-    <React.Fragment>
+    <>
       <Swiper
         navigation
+        loop={true}
         pagination={true}
         className="mySwiper"
       >
@@ -34,7 +35,7 @@ export default function Reactslick() {
         })}
       </Swiper>
       
-    </React.Fragment>
+    </>
   );
 }
 

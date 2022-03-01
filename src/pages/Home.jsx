@@ -6,6 +6,7 @@ import Viewers from '../components/Viewers';
 import Movies from '../components/Movies';
 import { Link } from 'react-router-dom';
 import { Context } from '../context';
+import Avatar from '../components/dropdown/Avatar';
 export default function Home() {
   const {movies} = useContext(Context)
   console.log(movies)
@@ -23,7 +24,6 @@ export default function Home() {
         ))
       } 
       </MoviesList>
-           
   </Container>;
 }
 

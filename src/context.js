@@ -11,8 +11,10 @@ export default function MoviesContext({children}) {
     const [moviesVideo, setMoviesVideo] = useState([])
     useEffect(() => { 
         onAuthStateChanged(auth, user => { 
-            if (user)
-                setUser(user)
+            if (user){
+              console.log(user)
+              setUser(user)
+            }
             else setUser(null)
         })
     },[])
